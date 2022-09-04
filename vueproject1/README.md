@@ -228,5 +228,5 @@ module.exports = {
 
 ## Vue Store
 
-- use Vuex vor Vue 2 projects
-- use Pinia vor new Vue 3 projects
+- use Vuex for Vue 2 projects
+- use Pinia for new Vue 3 projects
