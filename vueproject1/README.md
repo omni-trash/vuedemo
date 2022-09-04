@@ -230,3 +230,10 @@ module.exports = {
 
 - use Vuex for Vue 2 projects
 - use Pinia for new Vue 3 projects
+
+### State Managenemnt
+
+- each component has a local state, vue store means global state.
+- with local state u have to put they from component to component to component...
+- with global state they are centralized and available in all components.
+
