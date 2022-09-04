@@ -1,3 +1,3 @@
-## Vue Reference Stuff
+## Vue Stuff
 
 - SPA fun with Vue
