@@ -1,0 +1,53 @@
+/*
+-------------------------------------------
+Page Layout
+-------------------------------------------
+*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-size: 11pt;
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --main-background-color: #e74c3c;
+    --main-color: #ecf0f1;
+    --active-background-color: #c0392b;
+    --active-color: #ffbbbc;
+    --mono-dark: #333;
+    --mono-light: #ddd;
+}
+
+body {
+    min-height: 100%;
+    display: grid;
+    grid-template-areas: 
+    "content"
+    "footer";
+    grid-template-rows: 1fr 60px;
+    background: #f4f4f4;
+}
+
+#content {
+    grid-area: content;
+}
+
+#footer {
+    grid-area: footer;
+    background-color: var(--mono-dark);
+    color: var(--mono-light);
+    text-align: center;
+    display: table;
+}
+
+#footer p {
+    display: table-cell;
+    vertical-align: middle;
+}

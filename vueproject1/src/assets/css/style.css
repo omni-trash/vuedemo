@@ -1,0 +1,61 @@
+@import "default.css";
+@import "general.css";
+@import "navbar.css";
+@import "header.css";
+
+/*
+-------------------------------------------
+Stylings
+-------------------------------------------
+*/
+
+.breadcrumb {
+    background: var(--mono-light);
+    color: var(--mono-dark);
+}
+
+.breadcrumb-item.active,
+.breadcrumb a {
+    color: var(--mono-dark);
+}
+
+.list-group-item.active {
+    background-color: var(--main-background-color);
+    border-color: var(--active-background-color);
+}
+
+.progress-bar {
+    background: var(--mono-dark);
+    color: var(--mono-light);
+}
+
+.card-header.main-theme {
+    background-color: var(--main-background-color);
+    border-color: var(--active-background-color);
+    color: var(--main-color);
+}
+
+.dash-box {
+    text-align: center;
+}
+
+#login {
+    margin-top: 30px;
+}
+
+.table-striped-line .line:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+.row label {
+    color: gray;
+}
+
+.table-striped-line .line:not(:first-child) .row label {
+    display: none;
+}
+
+.table-striped-line:empty::after {
+    content: "no match";
+    display: block;
+}

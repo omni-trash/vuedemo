@@ -1,0 +1,65 @@
+/*
+-------------------------------------------
+Bootstrap 3.x -> 4.x
+-------------------------------------------
+*/
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: normal;
+}
+
+h1, .h1 {
+    font-size: calc(1rem * 2.2);
+}
+
+h2, .h2 {
+    font-size: calc(1rem * 2.2 * 0.80);
+}
+
+h3, .h3 {
+    font-size: calc(1rem * 2.2 * 0.80 * 0.80);
+}
+
+h4, .h4 {
+    font-size: calc(1rem * 2.2 * 0.80 * 0.80 * 0.80);
+}
+
+h5, .h5 {
+    font-size: calc(1rem * 2.2 * 0.80 * 0.80 * 0.80 * 0.80);
+}
+
+h6, .h6 {
+    font-size: calc(1rem * 2.2 * 0.80 * 0.80 * 0.80 * 0.80 * 0.80);
+}
+
+small {
+    font-size: 75%;
+}
+
+.progress,
+.card,
+.list-group {
+    margin-bottom: 1.25rem;
+}
+
+.card-title {    
+    margin: 0;
+}
+
+.progress {
+    line-height: normal;
+    height: auto;
+    font-size: .8rem;
+}
+
+.progress-bar {
+    padding: .25rem;
+}
+
+.badge {
+    font-size: .78rem;
+}
+
+.breadcrumb {
+    padding: .5rem 1rem;
+}

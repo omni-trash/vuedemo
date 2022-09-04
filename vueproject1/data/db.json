@@ -1,0 +1,327 @@
+{
+  "loggedinuser": {
+    "displayname": "Frodo"
+  },
+  "contracts": [
+    {
+      "id": 1,
+      "name": "Janette Wilkinson",
+      "company": "ENERFORCE",
+      "city": "Knowlton",
+      "expires": "2018-10-03T01:56:04",
+      "latitude": -23.558582,
+      "longitude": -172.541407
+    },
+    {
+      "id": 2,
+      "name": "Wilkerson Alvarez",
+      "company": "PLEXIA",
+      "city": "Linwood",
+      "expires": "2018-11-15T04:29:53",
+      "latitude": -67.32544,
+      "longitude": 32.219173
+    },
+    {
+      "id": 3,
+      "name": "Hancock Cohen",
+      "company": "STROZEN",
+      "city": "Cloverdale",
+      "expires": "2018-12-24T03:51:35",
+      "latitude": 22.329877,
+      "longitude": -66.445984
+    },
+    {
+      "id": 4,
+      "name": "Ava Hicks",
+      "company": "ECRAZE",
+      "city": "Stockdale",
+      "expires": "2015-05-27T12:59:20",
+      "latitude": -5.343401,
+      "longitude": 82.235323
+    },
+    {
+      "id": 5,
+      "name": "Noel Baldwin",
+      "company": "CALLFLEX",
+      "city": "Crawfordsville",
+      "expires": "2017-12-29T06:43:50",
+      "latitude": -40.661132,
+      "longitude": -86.840211
+    },
+    {
+      "id": 6,
+      "name": "Dianna Bender",
+      "company": "QUAILCOM",
+      "city": "Malott",
+      "expires": "2015-01-10T09:45:12",
+      "latitude": 13.716745,
+      "longitude": -120.432874
+    },
+    {
+      "id": 7,
+      "name": "Mavis Colon",
+      "company": "SHEPARD",
+      "city": "Shepardsville",
+      "expires": "2018-05-04T09:20:48",
+      "latitude": -25.015572,
+      "longitude": -121.876963
+    },
+    {
+      "id": 8,
+      "name": "Darcy Raymond",
+      "company": "VIRVA",
+      "city": "Munjor",
+      "expires": "2016-02-15T09:21:45",
+      "latitude": -6.055417,
+      "longitude": 67.091012
+    },
+    {
+      "id": 9,
+      "name": "Lavonne Ellison",
+      "company": "COMVEYOR",
+      "city": "Shindler",
+      "expires": "2015-10-31T04:01:43",
+      "latitude": 16.355701,
+      "longitude": -86.939884
+    },
+    {
+      "id": 10,
+      "name": "Fay Wolfe",
+      "company": "VORATAK",
+      "city": "Outlook",
+      "expires": "2021-06-20T10:30:23",
+      "latitude": 67.077936,
+      "longitude": 150.421797
+    },
+    {
+      "id": 11,
+      "name": "Huff Mccarthy",
+      "company": "BIFLEX",
+      "city": "Bowie",
+      "expires": "2017-06-15T02:02:06",
+      "latitude": 27.373601,
+      "longitude": -118.174271
+    },
+    {
+      "id": 12,
+      "name": "Sheppard Rios",
+      "company": "TYPHONICA",
+      "city": "Haena",
+      "expires": "2022-05-26T10:25:31",
+      "latitude": -59.774101,
+      "longitude": -174.125928
+    },
+    {
+      "id": 13,
+      "name": "Ilene Cortez",
+      "company": "SATIANCE",
+      "city": "Boyd",
+      "expires": "2019-07-26T07:35:18",
+      "latitude": -71.19,
+      "longitude": 161.954283
+    },
+    {
+      "id": 14,
+      "name": "Angelica Franco",
+      "company": "CENTURIA",
+      "city": "Allentown",
+      "expires": "2015-09-27T09:42:48",
+      "latitude": -82.624088,
+      "longitude": -168.217843
+    },
+    {
+      "id": 15,
+      "name": "Diane Nixon",
+      "company": "UTARA",
+      "city": "Thomasville",
+      "expires": "2014-02-12T03:12:20",
+      "latitude": 53.395904,
+      "longitude": 173.463015
+    },
+    {
+      "id": 16,
+      "name": "Laurel Crosby",
+      "company": "ULTRIMAX",
+      "city": "Villarreal",
+      "expires": "2017-01-15T08:28:22",
+      "latitude": -82.387736,
+      "longitude": -22.928671
+    },
+    {
+      "id": 17,
+      "name": "Alexandria Rowe",
+      "company": "IDEALIS",
+      "city": "Cecilia",
+      "expires": "2022-07-25T02:59:50",
+      "latitude": 24.471131,
+      "longitude": 18.840043
+    },
+    {
+      "id": 18,
+      "name": "Connie Miller",
+      "company": "CRUSTATIA",
+      "city": "Boykin",
+      "expires": "2015-03-25T06:49:22",
+      "latitude": -54.716327,
+      "longitude": -93.944515
+    },
+    {
+      "id": 19,
+      "name": "Valencia Mullen",
+      "company": "ENERSOL",
+      "city": "Enlow",
+      "expires": "2019-10-16T10:23:57",
+      "latitude": -56.069682,
+      "longitude": 76.514719
+    },
+    {
+      "id": 20,
+      "name": "Jana Avery",
+      "company": "METROZ",
+      "city": "Lodoga",
+      "expires": "2022-08-18T10:29:20",
+      "latitude": 66.515722,
+      "longitude": -4.55635
+    },
+    {
+      "id": 21,
+      "name": "Barbara Richard",
+      "company": "ISONUS",
+      "city": "Wanship",
+      "expires": "2017-07-16T01:00:11",
+      "latitude": 77.302609,
+      "longitude": -91.808637
+    },
+    {
+      "id": 22,
+      "name": "Bowman Hartman",
+      "company": "SLAMBDA",
+      "city": "Brethren",
+      "expires": "2016-07-19T06:46:31",
+      "latitude": -42.671675,
+      "longitude": -91.625797
+    },
+    {
+      "id": 23,
+      "name": "Combs Haney",
+      "company": "EARTHPLEX",
+      "city": "Kipp",
+      "expires": "2014-01-18T01:56:54",
+      "latitude": -43.320468,
+      "longitude": -165.149864
+    },
+    {
+      "id": 24,
+      "name": "Merrill Lawson",
+      "company": "RUGSTARS",
+      "city": "Snyderville",
+      "expires": "2020-06-19T09:47:32",
+      "latitude": 34.445804,
+      "longitude": 96.524025
+    },
+    {
+      "id": 25,
+      "name": "Elsie Pope",
+      "company": "TWIGGERY",
+      "city": "Eden",
+      "expires": "2017-03-05T06:16:08",
+      "latitude": 60.335904,
+      "longitude": -174.043113
+    },
+    {
+      "id": 26,
+      "name": "Branch Tucker",
+      "company": "XPLOR",
+      "city": "Fostoria",
+      "expires": "2018-01-30T04:24:14",
+      "latitude": -27.076414,
+      "longitude": 36.064798
+    },
+    {
+      "id": 27,
+      "name": "Lucile Maxwell",
+      "company": "GINKOGENE",
+      "city": "Wikieup",
+      "expires": "2019-06-16T08:32:05",
+      "latitude": 65.236501,
+      "longitude": -20.158194
+    },
+    {
+      "id": 28,
+      "name": "Magdalena Everett",
+      "company": "DIGITALUS",
+      "city": "Collins",
+      "expires": "2022-06-29T03:25:00",
+      "latitude": 20.64076,
+      "longitude": -153.501087
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Pflaume",
+      "amount": 200,
+      "color": "Rot"
+    },
+    {
+      "id": 2,
+      "name": "Erbsen",
+      "amount": 24,
+      "color": "Weiß"
+    },
+    {
+      "id": 3,
+      "name": "Erdbeere",
+      "amount": 200,
+      "color": "Rot"
+    },
+    {
+      "id": 4,
+      "name": "Pfirsich",
+      "amount": 80,
+      "color": "Orange"
+    },
+    {
+      "id": 5,
+      "name": "Birne",
+      "amount": 100,
+      "color": "Gelb"
+    },
+    {
+      "id": 6,
+      "name": "Birne",
+      "amount": 50,
+      "color": "Gelb"
+    },
+    {
+      "id": 7,
+      "name": "Aprikose",
+      "amount": 150,
+      "color": "Gelb"
+    },
+    {
+      "amount": 62,
+      "name": "Erbsen",
+      "color": "Gold",
+      "id": 8
+    },
+    {
+      "amount": 10,
+      "name": "Hosen",
+      "color": "Blau",
+      "id": 10
+    },
+    {
+      "amount": 30,
+      "name": "Rosen",
+      "color": "Rot",
+      "id": 11
+    },
+    {
+      "amount": 50,
+      "name": "Tassen",
+      "color": "Gelb",
+      "id": 12
+    }
+  ]
+}

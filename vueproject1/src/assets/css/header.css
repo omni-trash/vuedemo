@@ -1,0 +1,13 @@
+/*
+-------------------------------------------
+Header
+-------------------------------------------
+*/
+
+#header {
+    background: var(--mono-dark);
+    color: var(--mono-light);
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}

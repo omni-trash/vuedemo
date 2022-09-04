@@ -1,0 +1,205 @@
+/*
+-------------------------------------------
+Navbar Theme
+https://work.smarchal.com/twbscolor/
+-------------------------------------------
+*/
+
+.navbar {
+    background-color: var(--main-background-color);
+}
+
+.navbar .navbar-brand {
+    color: var(--main-color);
+}
+
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+    color: var(--active-color);
+}
+
+.navbar .navbar-text {
+    color: var(--main-color);
+}
+
+.navbar .navbar-text a {
+    color: var(--active-color);
+}
+
+.navbar .navbar-text a:hover,
+.navbar .navbar-text a:focus {
+    color: var(--active-color);
+}
+
+.navbar .navbar-nav .nav-link:not(.disabled):hover,
+.navbar .navbar-nav .nav-link:not(.disabled):focus {
+    color: var(--active-color);
+}
+
+.navbar .navbar-nav .nav-item.active .nav-link,
+.navbar .navbar-nav .nav-item.active .nav-link:hover,
+.navbar .navbar-nav .nav-item.active .nav-link:focus,
+.navbar .navbar-nav .nav-item.show .nav-link,
+.navbar .navbar-nav .nav-item.show .nav-link:hover,
+.navbar .navbar-nav .nav-item.show .nav-link:focus {
+    color: var(--active-color);
+    background-color: var(--active-background-color);
+}
+
+.navbar .navbar-toggler {
+    border-color: var(--active-color);
+    border-radius: 0;
+}
+
+.navbar .navbar-toggler:hover,
+.navbar .navbar-toggler:focus {
+    background-color: var(--active-background-color);
+    box-shadow: none;
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon {
+    color: var(--main-color);
+}
+
+.navbar .navbar-collapse,
+.navbar .navbar-form {
+    border-color: var(--active-background-color);
+}
+
+.navbar .navbar-link {
+    color: var(--main-color);
+}
+
+.navbar .navbar-link:hover {
+    color: var(--active-color);
+}
+
+@media (max-width: 575px) {
+    .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item {
+        color: var(--main-color);
+    }
+
+    .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+    .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+        color: var(--active-color);
+    }
+
+    .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item.active {
+        color: var(--active-color);
+        background-color: var(--active-background-color);
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item {
+        color: var(--main-color);
+    }
+
+    .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+    .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+        color: var(--active-color);
+    }
+
+    .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item.active {
+        color: var(--active-color);
+        background-color: var(--active-background-color);
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item {
+        color: var(--main-color);
+    }
+
+    .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+    .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+        color: var(--active-color);
+    }
+
+    .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item.active {
+        color: var(--active-color);
+        background-color: var(--active-background-color);
+    }
+}
+
+@media (max-width: 1199px) {
+    .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item {
+        color: var(--main-color);
+    }
+
+    .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+    .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+        color: var(--active-color);
+    }
+
+    .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item.active {
+        color: var(--active-color);
+        background-color: var(--active-background-color);
+    }
+}
+
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item {
+    color: var(--main-color);
+}
+
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+    color: var(--active-color);
+}
+
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item.active {
+    color: var(--active-color);
+    background-color: var(--active-background-color);
+}
+
+/* 
+Customize the Navbar
+New Bootstrap 4 Breakpoint (iPad Mini)
+*/
+
+.navbar .navbar-nav .nav-item {
+    color: var(--main-color);
+    padding: .5rem 1rem;
+}
+
+.navbar .navbar-right .nav-item:last-child {
+    padding-right: 0;
+}
+
+.navbar .navbar-nav .active {
+    color: var(--active-color) !important;
+    background-color: var(--active-background-color);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler .oi-menu {
+    color: var(--main-color);
+}
+
+.navbar-toggler:focus .oi-menu {
+    color: var(--active-color);
+}
+
+@media (max-width: 767px) {
+
+    .navbar-expand-md>.container,
+    .navbar-expand-md>.container-fluid,
+    .navbar-expand-md>.container-lg,
+    .navbar-expand-md>.container-md,
+    .navbar-expand-md>.container-sm,
+    .navbar-expand-md>.container-xl {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .navbar-nav {
+        border-top: thin solid var(--active-color);
+    }
+
+    .navbar-nav:last-child {
+        margin-bottom: 1rem;
+    }
+}
