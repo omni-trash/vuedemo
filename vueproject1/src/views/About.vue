@@ -15,6 +15,10 @@
         <p>
             I'm currently unavailable, during some mordor quests.
         </p>
+
+        <p>
+            Build {{ buildDate }}
+        </p>
     </div>
 </template>
 
@@ -24,5 +28,8 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     name: 'About',
     components: {},
+    computed: {
+        buildDate: (): string => process.env.VUE_APP_BUILD_DATE,
+    }
 });
 </script>

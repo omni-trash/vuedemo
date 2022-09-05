@@ -17,6 +17,8 @@ if (!certificateName) {
 const certFilePath = path.join(baseFolder, `${certificateName}.pem`);
 const keyFilePath  = path.join(baseFolder, `${certificateName}.key`);
 
+process.env.VUE_APP_BUILD_DATE = (new Date()).toISOString().slice(0, 10);
+
 module.exports = {
     publicPath: process.env.VUE_APP_PUBLIC_PATH,
     productionSourceMap: false,
