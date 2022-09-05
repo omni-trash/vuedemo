@@ -15,10 +15,10 @@ if (!certificateName) {
 }
 
 const certFilePath = path.join(baseFolder, `${certificateName}.pem`);
-const keyFilePath = path.join(baseFolder, `${certificateName}.key`);
+const keyFilePath  = path.join(baseFolder, `${certificateName}.key`);
 
 module.exports = {
-    publicPath: process.env.PUBLIC_PATH,
+    publicPath: process.env.VUE_APP_PUBLIC_PATH,
     productionSourceMap: false,
     devServer: {
         historyApiFallback: true,

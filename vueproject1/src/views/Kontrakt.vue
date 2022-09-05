@@ -84,14 +84,14 @@ export default defineComponent({
     methods: {
         ...pinia.mapActions(store.useOrderStore, ["loadLocalStorage", "saveLocalStorage", "loadProducts", "addProduct"]),
         addNewItemClicked() {
-            this.newProduct = { amount: 50 } as models.Product
+            this.newProduct = { amount: 50 } as models.Product;
         },
         addNewItemCancel() {
             this.newProduct = null;
         },
-        addNewItemOk(edit: models.Product) {
+        addNewItemOk(modifiedProduct: models.Product) {
             this.newProduct = null;
-            this.addProduct(edit);
+            this.addProduct(modifiedProduct);
         }
     },
 });

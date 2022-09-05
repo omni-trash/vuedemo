@@ -28,7 +28,7 @@
             <div>
                 <label class="form-label">-</label>
                 <div>
-                    <button type="button" class="btn btn-small" @click="showForm = true">
+                    <button type="button" class="btn btn-small" @click="(editProduct = { ...product } as models.Product)">
                         <span class="bi-pencil-square"></span>
                     </button>
                     <button type="button" class="btn btn-small" @click="deleteProduct(product.id)">
@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <ProductItemEdit v-if="showForm" :product="product" @cancel="editCancel" @ok="editOk"></ProductItemEdit>
+    <ProductItemEdit v-if="editProduct" :product="editProduct" @cancel="editCancel" @ok="editOk"></ProductItemEdit>
 </template>
 
 <script lang="ts">
@@ -51,7 +51,7 @@ import store from '../store';
 import * as models from '../services/models';
 
 interface Data {
-    showForm: boolean,
+    editProduct: models.Product | null,
 }
 
 export default defineComponent({
@@ -64,22 +64,19 @@ export default defineComponent({
     components: {
         ProductItemEdit,
     },
-    emits: [
-        'update:product'
-    ],
     data(): Data {
         return {
-            showForm: false,
+            editProduct: null,
         }
     },
     methods: {
         ...pinia.mapActions(store.useOrderStore, ["updateProduct", "deleteProduct"]),
         editCancel() {
-            this.showForm = false;
+            this.editProduct = null;
         },
-        editOk(edit: models.Product) {
-            this.showForm = false;
-            this.updateProduct(edit);
+        editOk(modifiedProduct: models.Product) {
+            this.editProduct = null;
+            this.updateProduct(modifiedProduct);
         }
     }
 });

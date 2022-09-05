@@ -36,13 +36,15 @@ Ensure you run the Terminal in the project folder with the
 Create ``.env`` and ``.env.production`` to set up some Variables to use
 in your code or ``vue.config.js`` when build the app.
 
+See [Environment Variables](https://cli.vuejs.org/guide/mode-and-env.html#using-env-variables-in-client-side-code).
+
 ## vue.config.js
 Change ``devServer`` to use ``server``, ``type`` and ``options`` in
 ``module.exports`` section instead of ``http`` keyword.
 
 ```javascript
 module.exports = {
-    publicPath: process.env.PUBLIC_PATH,
+    publicPath: process.env.VUE_APP_PUBLIC_PATH,
     productionSourceMap: false,
     devServer: {
         server: {

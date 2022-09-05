@@ -13,15 +13,15 @@
                             <div class="row my-2">
                                 <div class="col-md-4">
                                     <label class="form-label">Menge</label>
-                                    <input type="number" class="form-control" v-model="edit.amount">
+                                    <input type="number" class="form-control" v-model="modifiedProduct.amount">
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label">Name</label>
-                                    <input type="text" class="form-control" v-model="edit.name">
+                                    <input type="text" class="form-control" v-model="modifiedProduct.name">
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label">Farbe</label>
-                                    <input type="text" class="form-control" v-model="edit.color">
+                                    <input type="text" class="form-control" v-model="modifiedProduct.color">
                                 </div>
                             </div>
 
@@ -37,7 +37,7 @@
 
                     <div class="modal-footer">
                         <button type="button" @click="$emit('cancel')" class="btn btn-secondary">Abbrechen</button>
-                        <button type="button" @click="$emit('ok', edit)" :disabled="errors.length > 0"
+                        <button type="button" @click="$emit('ok', modifiedProduct)" :disabled="errors.length > 0"
                             class="btn btn-primary">Speichern</button>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ declare const bootstrap: any;
 
 interface Data {
     bsModalDialog: any,
-    edit: models.Product,
+    modifiedProduct: models.Product,
     errors: string[]
 }
 
@@ -69,8 +69,8 @@ export default defineComponent({
     data(): Data {
         return {
             bsModalDialog: null,
-            // edit a copy, product is readonly
-            edit: { ...this.product } as models.Product,
+            // product is readonly
+            modifiedProduct: { ...this.product } as models.Product,
             errors: []
         }
     },
@@ -93,7 +93,7 @@ export default defineComponent({
     },
     methods: {
         checkForm() {
-            this.errors = validator.validateProduct(this.edit);
+            this.errors = validator.validateProduct(this.modifiedProduct);
         }
     },
 });
