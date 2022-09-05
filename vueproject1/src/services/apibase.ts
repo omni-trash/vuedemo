@@ -54,6 +54,7 @@ function POST<Payload, Result>(path: string, payload: Payload): Promise<Result> 
 
   return utils.delay(timeout).then(() => {
     // post data
+    // if fetch failed remove "headers: { 'Content-Type': 'application/json' }"
     return fetch(`${apiBaseUrl}${path}`, { credentials: 'include', headers: { 'Content-Type': 'application/json' }, method: 'POST', body: JSON.stringify(payload) });
   }).then(response => {
     return checkResponse(response);
@@ -68,6 +69,7 @@ function PATCH<Payload, Result>(path: string, payload: Payload): Promise<Result>
 
   return utils.delay(timeout).then(() => {
     // post data
+    // if fetch failed remove "headers: { 'Content-Type': 'application/json' }"
     return fetch(`${apiBaseUrl}${path}`, { credentials: 'include', headers: { 'Content-Type': 'application/json' }, method: 'PATCH', body: JSON.stringify(payload) });
   }).then(response => {
     return checkResponse(response);
