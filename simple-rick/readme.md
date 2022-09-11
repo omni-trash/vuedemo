@@ -43,7 +43,11 @@ For smaller smart projects it is possible to made it fast without a extra projec
             },
             methods: {
                 click() {
-                    this.color= `rgb(${Math.random() * 255 >> 0}, ${Math.random() * 255 >> 0}, ${Math.random() * 255 >> 0})`;
+                    const r = Math.random() * 256 >> 0;
+                    const g = Math.random() * 256 >> 0;
+                    const b = Math.random() * 256 >> 0;
+
+                    this.color = `rgb(${r}, ${g}, ${b})`;
                 }
             }
         });
