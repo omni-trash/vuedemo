@@ -42,9 +42,13 @@ See [Environment Variables](https://cli.vuejs.org/guide/mode-and-env.html#using-
 Change ``devServer`` to use ``server``, ``type`` and ``options`` in
 ``module.exports`` section instead of ``http`` keyword.
 
+- publicPath is BASE_URL
+
+
 ```javascript
 module.exports = {
-    publicPath: process.env.VUE_APP_PUBLIC_PATH,
+    // see vue.config.js
+    publicPath: "",
     productionSourceMap: false,
     devServer: {
         server: {
@@ -224,7 +228,7 @@ module.exports = {
 <html lang="">
 
   <head>
-    <base href="/<%= BASE_URL %>">
+    <base href="<%= process.env.VUE_APP_PUBLIC_PATH %>">
     ...
 ```
 
