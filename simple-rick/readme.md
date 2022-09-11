@@ -15,19 +15,36 @@ For smaller smart projects it is possible to made it fast without a extra projec
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="path to global vue from cdn or local file whatever u want"></script>
+    <style>
+        :root, button {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16pt;
+        }
+    </style>
 </head>
 <body>
     <h1>Simple Rick</h1>
+
     <div id="app">
-        {{ greetings }}
+        <h2 :style="{color}">{{ greetings }}</h2>
+
+        <div>current color is {{ color }}</div>
+
+        <button type="button" @click="click">click me to change color</button>
     </div>
 
     <script>
         const app = Vue.createApp({
             data() {
                 return {
-                    greetings: "Hello from Vue"
+                    greetings: "Hello from Vue",
+                    color: "black",
                 };
+            },
+            methods: {
+                click() {
+                    this.color= `rgb(${Math.random() * 255 >> 0}, ${Math.random() * 255 >> 0}, ${Math.random() * 255 >> 0})`;
+                }
             }
         });
 
