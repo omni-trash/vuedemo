@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.39/vue.global.min.js" integrity="sha512-2k8Z8sJYPSphKi6TTg6D+DaZnjFXjROBXNEUp6xem+gt3KwxAJcxup1C34FOXDVELSNkM3tGRqvouxgAHm6kXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <h1>Simple Rick</h1>
+    <div id="app">
+        {{ greetings }}
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    greetings: "Hello from Vue"
+                };
+            }
+        });
+
+        app.mount("#app");
+    </script>    
+</body>
+</html>
