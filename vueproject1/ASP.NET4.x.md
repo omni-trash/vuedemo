@@ -22,7 +22,7 @@ There are two Steps
 - change ``VUE_APP_ROOT_API`` in ``.env`` to the existing Web ApI Project during development
 - run the old project during development to access the api endpoints
 
-U have to setup CORS in the old project to access the api endpoints from your vue project.
+You have to setup CORS in the old project to access the api endpoints from your vue project.
 ```xml
 <customHeaders>
     <add name="Access-Control-Allow-Origin" value="https://localhost:5002" />
@@ -33,6 +33,19 @@ U have to setup CORS in the old project to access the api endpoints from your vu
 
 > Remove custom headers when deploy the app to production
 
+You can also enable CORS in the ``Startup.cs``.
+
+```csharp
+public class Startup
+{
+    public void Configuration(IAppBuilder app)
+    {
+        // during development
+        app.UseCors(CorsOptions.AllowAll);
+        ...
+    }
+}
+```
 # Web API when done
 
 - remove all unnecessary folders and classes
@@ -130,3 +143,41 @@ At this point we are done. We put the MVC stuff into the vue project, build that
 <!-- change to your app path -->
 <base href="/YourAppName/">
 ```
+
+## How to resolve the Web Application Path at Runtime
+
+We know that the ``wwwroot/index.html`` is a static file and that we have to set the base href to the current public path.
+
+Ok let us change the ``index.html`` to a dynamic page ``index.aspx``. 
+
+> The file extension for Web Forms is ``.aspx``.
+
+> The file extension for Razor is ``.cshtml``.
+
+Razor is more complicated to configure, let us use Web Forms instead.
+
+```html
+<!-- Resolve App Path in Web Forms -->
+<base href='<%= ResolveUrl("~/") %>'>
+```
+
+Now add a route to that page.
+
+```csharp
+public class RouteConfig
+{
+    public static void RegisterRoutes(RouteCollection routes)
+    {
+        routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+        // Web Forms (!)
+        routes.MapPageRoute("", "", "~/wwwroot/index.aspx");
+    }
+}
+```
+
+Ok that's all, but it will not work with the ``Application_EndRequest`` above, were we try to read the ``index.html``.
+
+- [ ] Maybe we have to use ``Response.Redirect("~/")`` in ``Application_EndRequest`` (404).
+
+> we have to change from ``index.html`` to ``index.aspx`` after each production build manually (thats the bad news)
