@@ -24,9 +24,10 @@ There are two Steps
 
 You have to setup CORS in the old project to access the api endpoints from your vue project.
 ```xml
-<customHeaders>
-    <add name="Access-Control-Allow-Origin" value="https://localhost:5002" />
-    <add name="Access-Control-Allow-Credentials" value="true" />
+<httpProtocol>
+    <customHeaders>
+        <add name="Access-Control-Allow-Origin" value="https://localhost:5002" />
+        <add name="Access-Control-Allow-Credentials" value="true" />
     </customHeaders>
 </httpProtocol>
 ```
@@ -189,7 +190,7 @@ After some research i'm able to let u know how we can create the ``index.aspx`` 
 At first we set the public path in the ``prod.environment`` to the statement we need.
 
 ```javascript
-VUE_APP_PUBLIC_PATH=<%= Resolve.Url("~/") %>
+VUE_APP_PUBLIC_PATH=<%= ResolveUrl("~/") %>
 ```
 
 The statement is not handled with webpack templating and can be injected as is.
