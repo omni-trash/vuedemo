@@ -183,6 +183,8 @@ console.log((person as any).name) // Susan
 
 Make sense, to avoid nested proxy calls.
 
+> Proxy is a virtual object in JS Engine.
+
 ```typescript
 // create proxy when copying
 const person: User = proxy<User>({...user});

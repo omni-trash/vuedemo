@@ -180,4 +180,67 @@ Ok that's all, but it will not work with the ``Application_EndRequest`` above, w
 
 - [ ] Maybe we have to use ``Response.Redirect("~/")`` in ``Application_EndRequest`` (404).
 
-> we have to change from ``index.html`` to ``index.aspx`` after each production build manually (thats the bad news)
+> We have to change from ``index.html`` to ``index.aspx`` after each production build manually
+
+## Create the index.aspx during production build
+
+After some research i'm able to let u know how we can create the ``index.aspx`` on each production build.
+
+At first we set the public path in the ``prod.environment`` to the statement we need.
+
+```javascript
+VUE_APP_PUBLIC_PATH=<%= Resolve.Url("~/") %>
+```
+
+The statement is not handled with webpack templating and can be injected as is.
+
+No we have to prepare the ``public/index.html``.
+
+Replace the base tag.
+
+Before
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="<%= process.env.VUE_APP_PUBLIC_PATH %>">
+    ...
+```
+
+After
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= headHtmlBaseTag %>
+    ...
+```
+
+Now we have to configure the html plugin in ``vue.config.js``.
+
+```javascript
+    // vue.config.js
+    chainWebpack: config => {
+        config.plugin('html').tap(args => {
+            const options = args[0];
+
+            // on production build (!)
+            if (process.env.NODE_ENV === 'production') {
+                // note that public/index.html works as template during build
+                // public/index.html -> webpack -> dist/index.aspx
+                options.filename = 'index.aspx';
+            }
+
+            // adds a template parameter we can use in the public/index.html
+            options.templateParameters = {
+                headHtmlBaseTag: `<base href='${process.env.VUE_APP_PUBLIC_PATH}'>`
+            };
+
+            // let the html source code human readable
+            // and keep the injected '<%= %>' as is (see env.production).
+            options.minify = false;
+
+            return args;
+        });
+    },
+```
