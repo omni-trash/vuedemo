@@ -194,7 +194,7 @@ VUE_APP_PUBLIC_PATH=<%= Resolve.Url("~/") %>
 
 The statement is not handled with webpack templating and can be injected as is.
 
-No we have to prepare the ``public/index.html``.
+Now we have to prepare the ``public/index.html``.
 
 Replace the base tag.
 
