@@ -64,7 +64,11 @@ U need to install two packages to serve the files from the ``wwwroot`` folder.
 
 ```xml
 <handlers>
-    <add name="Owin" verb="GET" path="*" type="Microsoft.Owin.Host.SystemWeb.OwinHttpHandler, Microsoft.Owin.Host.SystemWeb"/>
+    <add 
+        name="Owin" 
+        verb="GET" 
+        path="*" 
+        type="Microsoft.Owin.Host.SystemWeb.OwinHttpHandler, Microsoft.Owin.Host.SystemWeb" />
 </handlers>
 ```
 
